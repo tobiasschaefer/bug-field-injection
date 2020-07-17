@@ -20,6 +20,11 @@
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_0bx6cv2" sourceRef="Activity_1ls80lx" targetRef="Event_03btssl" />
     <bpmn:serviceTask id="Activity_1ls80lx" name="3" camunda:class="com.example.Service2">
+      <bpmn:extensionElements>
+        <camunda:field name="myfield">
+          <camunda:expression>${myvar}</camunda:expression>
+        </camunda:field>
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_0e56o08</bpmn:incoming>
       <bpmn:outgoing>Flow_0bx6cv2</bpmn:outgoing>
     </bpmn:serviceTask>
