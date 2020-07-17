@@ -10,6 +10,11 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_0t3c680" sourceRef="Activity_04fb38q" targetRef="Activity_068ln34" />
     <bpmn:serviceTask id="Activity_04fb38q" name="Do something" camunda:expression="${myService.hello(execution)}" camunda:resultVariable="myvar">
+      <bpmn:extensionElements>
+        <camunda:field name="fieldvar">
+          <camunda:string>hello</camunda:string>
+        </camunda:field>
+      </bpmn:extensionElements>
       <bpmn:incoming>Flow_1tqaqra</bpmn:incoming>
       <bpmn:outgoing>Flow_0t3c680</bpmn:outgoing>
     </bpmn:serviceTask>
